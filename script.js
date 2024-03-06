@@ -56,3 +56,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+// Função para mostrar/ocultar o conteúdo da opção selecionada
+function toggleConteudo(conteudoId, setaId) {
+    var conteudo = document.getElementById(conteudoId);
+    var seta = document.getElementById(setaId);
+
+    // Verifica se o conteúdo está visível e alterna
+    if (conteudo.style.display === 'block') {
+        conteudo.style.display = 'none';
+        seta.innerHTML = '&#9660;'; // Seta para baixo
+    } else {
+        conteudo.style.display = 'block';
+        seta.innerHTML = '&#9650;'; // Seta para cima
+    }
+}

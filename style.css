@@ -114,6 +114,30 @@ a {
     text-decoration: none;
 }
 
+.opcoes {
+    margin-top: 0px; /* Ajuste a margem conforme necessário */
+}
+
+.opcao {
+    cursor: pointer;
+    background-color: #430D7F;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.seta {
+    font-size: 18px;
+}
+
+.opcao-conteudo {
+    display: none;
+    color: #000;
+    padding: 10px;
+}
+
 /* Estilos para telas pequenas (dispositivos móveis) */
 @media only screen and (max-width: 600px) {
     header {
