@@ -8,7 +8,7 @@ body {
 header {
     background-color: #430D7F;
     color: #fff;
-    padding: 0px; /* Reduzindo o padding do cabeçalho */
+    padding: 10px; /* Ajustei o padding do cabeçalho */
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -16,10 +16,10 @@ header {
 }
 
 header img {
-    max-width: 100px;
+    max-width: 70px; /* Ajuste o tamanho da imagem conforme necessário */
     width: 100%;
     height: auto;
-    margin-right: 10px; /* Reduzindo a margem direita da imagem */
+    margin-right: 10px;
     margin-left: 10px;
 }
 
@@ -47,7 +47,7 @@ a {
     text-align: center;
     background-color: #E6B800;
     color: #fff;
-    padding: 10px;
+    padding: 5px;
 }
 
 .aba {
@@ -60,7 +60,6 @@ a {
     max-width: 80px;
     width: 100%;
     height: auto;
-    margin-right: 20px;
 }
 
 .aba-conteudo {
@@ -73,19 +72,54 @@ a {
     margin: 20px 0;
 }
 
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.patrocinadores,
+.redes-sociais,
+.contato {
+    margin-bottom: 20px;
+}
+
+h4 {
+    color: #E6B800;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
 /* Estilos para telas pequenas (dispositivos móveis) */
 @media only screen and (max-width: 600px) {
     header {
-        flex-direction: row;
-        text-align: left;
-        margin-top: -30px;
-        padding: 0px 20px;
+        background-color: #430D7F;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; /* Centralizar a imagem no final do cabeçalho */
     }
 
     header img {
-        max-width: 30%;
-        margin-top: 20px;
-        margin-right: 10px; /* Reduzindo a margem direita da imagem em dispositivos móveis */
+        max-width: 30%; /* Ajuste conforme necessário */
+        width: 100%;
+        height: auto;
+        margin-right: 0;
     }
 
     nav {
@@ -94,22 +128,58 @@ a {
     }
 
     ul {
-        flex-direction: row;
-        justify-content: space-around;
-        width: 100%;
+        flex-direction: column;
+        align-items: center;
     }
 
     li {
-        margin: 0;
+        margin: 10px 0;
     }
 
     .aba {
-        flex-direction: column;
+        display: flex;
+        align-items: flex-start;
+        padding: 10px;
     }
 
     .aba img {
-        max-width: 100%;
-        margin-right: 0;
-        margin-bottom: 10px;
+        max-width: 40%;
+        margin-right: 10px;
+    }
+
+    .aba-conteudo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .info-texto {
+        text-align: left;
+    }
+
+    .input-bairro {
+        display: flex;
+        align-items: center;
+    }
+
+    .input-bairro input {
+        margin-right: 10px;
+    }
+
+    .buscar-bairro {
+        display: flex;
+        flex-direction: column; /* Alteração para colocar os elementos em coluna */
+        align-items: center; /* Centralizar a seção de busca de bairro */
+        justify-content: center; /* Centralizar a seção de busca de bairro */
+    }
+
+    .buscar-bairro button {
+        margin-top: 10px; /* Espaçamento entre o input e o botão */
+    }
+
+    .buscar-bairro img {
+        max-width: 30px;
+        margin-right: 10px;
     }
 }
