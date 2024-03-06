@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Minha Página</title>
 </head>
-
 <body>
     <script src="script.js"></script>
     <header>
@@ -17,13 +15,13 @@
                 <!-- Adicione seus itens de navegação aqui -->
             </ul>
         </nav>
-
+        
         <div class="buscar-bairro">
-            <div class="input-bairro">
-                <img src="/images/ponto2.png" alt="Ícone de busca">
-                <input type="text" placeholder="Digite o bairro">
-            </div>
-            <button type="button">Procurar</button>
+           <div class="input-bairro">
+             <img src="/images/ponto2.png" alt="Ícone de busca">
+             <input type="text" placeholder="Digite o bairro">
+           </div>
+           <button type="button">Procurar</button>
         </div>
     </header>
 
@@ -35,13 +33,13 @@
     <div class="opcoes" id="maisProximosOpcao">
         <div class="opcao opcao-aberta" onclick="toggleOpcoes('maisProximo', 'setaMaisProximo')">
             MAIS PRÓXIMO DE VOCÊ
-            <span class="seta" id="setaMaisProximo">&#9660;</span><!-- Seta para baixo -->
-        </div>
-        <div id="maisProximo" class="opcao-conteudo">
+            <span class="seta" id="setaMaisProximo">&#9650;</span><!-- Seta para cima -->
+        </div>        
+        <div id="maisProximo" class="opcao-conteudo opcao-aberta">
             <!-- Conteúdo relacionado à opção "MAIS PRÓXIMO DE VOCÊ" -->
             <!-- Pode incluir informações sobre localização, bairro, etc. -->
             <p>Conteúdo relacionado à sua localização.</p>
-
+        
             <!-- Seções adicionadas -->
             <section class="aba">
                 <img src="/images/arenateste.png">
@@ -54,9 +52,9 @@
                     <button class="quero-agendar-button">QUERO AGENDAR</button>
                 </div>
             </section>
-
+        
             <hr class="linha-separadora">
-
+        
             <section class="aba">
                 <img src="/images/arenateste2.png">
                 <div class="aba-conteudo">
@@ -68,9 +66,9 @@
                     <button class="quero-agendar-button">QUERO AGENDAR</button>
                 </div>
             </section>
-
+        
             <hr class="linha-separadora">
-
+        
             <section class="aba">
                 <img src="/images/quadra3teste.png">
                 <div class="aba-conteudo">
@@ -83,6 +81,43 @@
                 </div>
             </section>
             <!-- Mais abas podem ser adicionadas conforme necessário -->
+        </div>
+
+        <!-- Adicione as novas barras aqui -->
+        <div class="opcao" onclick="toggleOpcoes('centro', 'setaCentro')">
+            CENTRO
+            <span class="seta" id="setaCentro">&#9660;</span><!-- Seta para baixo -->
+        </div>
+        <div id="centro-conteudo" class="opcao-conteudo">
+            <!-- Conteúdo relacionado à opção "CENTRO" -->
+            <!-- Adicione aqui o conteúdo específico para a opção "CENTRO" -->
+        </div>
+
+        <div class="opcao" onclick="toggleOpcoes('leste', 'setaLeste')">
+            LESTE
+            <span class="seta" id="setaLeste">&#9660;</span><!-- Seta para baixo -->
+        </div>
+        <div id="leste-conteudo" class="opcao-conteudo">
+            <!-- Conteúdo relacionado à opção "LESTE" -->
+            <!-- Adicione aqui o conteúdo específico para a opção "LESTE" -->
+        </div>
+
+        <div class="opcao" onclick="toggleOpcoes('sul', 'setaSul')">
+            SUL
+            <span class="seta" id="setaSul">&#9660;</span><!-- Seta para baixo -->
+        </div>
+        <div id="sul-conteudo" class="opcao-conteudo">
+            <!-- Conteúdo relacionado à opção "SUL" -->
+            <!-- Adicione aqui o conteúdo específico para a opção "SUL" -->
+        </div>
+
+        <div class="opcao" onclick="toggleOpcoes('norte', 'setaNorte')">
+            NORTE
+            <span class="seta" id="setaNorte">&#9660;</span><!-- Seta para baixo -->
+        </div>
+        <div id="norte-conteudo" class="opcao-conteudo">
+            <!-- Conteúdo relacionado à opção "NORTE" -->
+            <!-- Adicione aqui o conteúdo específico para a opção "NORTE" -->
         </div>
     </div>
 
@@ -113,8 +148,7 @@
             <p>Telefone: (123) 456-7890</p>
         </div>
     </footer>
-
+    
     <script src="script.js"></script>
 </body>
-
 </html>
