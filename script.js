@@ -1,23 +1,33 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Obtendo a data atual
-    var dataAtual = new Date();
+    // Função para formatar o número com zero à esquerda se for menor que 10
+    function formatarNumero(numero) {
+        return numero < 10 ? '0' + numero : numero;
+    }
 
-    // Extraindo informações de data e horário
-    var dia = dataAtual.getDate();
-    var mes = dataAtual.getMonth() + 1; // Lembre-se que os meses começam do zero
-    var ano = dataAtual.getFullYear();
+    // Função para obter a data e hora formatadas
+    function obterDataHoraFormatada() {
+        var dataAtual = new Date();
 
-    var horas = dataAtual.getHours();
-    var minutos = dataAtual.getMinutes();
-    var segundos = dataAtual.getSeconds();
+        var dia = formatarNumero(dataAtual.getDate());
+        var mes = formatarNumero(dataAtual.getMonth() + 1);
+        var ano = dataAtual.getFullYear();
 
-    // Criando uma string formatada
-    var dataHoraFormatada = 'Data: ' + dia + '/' + mes + '/' + ano + ' - Horário: ' + horas + ':' + minutos + ':' + segundos;
+        var horas = formatarNumero(dataAtual.getHours());
+        var minutos = formatarNumero(dataAtual.getMinutes());
+        var segundos = formatarNumero(dataAtual.getSeconds());
 
-    // Exibindo as informações no console
-    console.log(dataHoraFormatada);
+        return 'Data: ' + dia + '/' + mes + '/' + ano + ' - Horário: ' + horas + ':' + minutos + ':' + segundos;
+    }
 
-    // Adicionando a string formatada ao parágrafo no HTML
-    var elementoP = document.getElementById('dataHorario');
-    elementoP.textContent = dataHoraFormatada;
+    // Atualizar o parágrafo inicialmente
+    atualizarHorario();
+
+    // Atualizar o horário a cada segundo
+    setInterval(atualizarHorario, 1000);
+
+    // Função para atualizar o horário no parágrafo
+    function atualizarHorario() {
+        var elementoP = document.getElementById('dataHorario');
+        elementoP.textContent = obterDataHoraFormatada();
+    }
 });
