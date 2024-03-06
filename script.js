@@ -1,3 +1,5 @@
+// script.js
+
 document.addEventListener('DOMContentLoaded', function() {
     // Função para formatar o número com zero à esquerda se for menor que 10
     function formatarNumero(numero) {
@@ -19,15 +21,38 @@ document.addEventListener('DOMContentLoaded', function() {
         return 'Data: ' + dia + '/' + mes + '/' + ano + ' - Horário: ' + horas + ':' + minutos + ':' + segundos;
     }
 
+    // Função para obter a localização do usuário
+    function obterLocalizacao() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var latitude = position.coords.latitude;
+                var longitude = position.coords.longitude;
+
+                console.log('Latitude: ' + latitude + ', Longitude: ' + longitude);
+
+                // Aqui você pode usar a latitude e longitude conforme necessário
+            }, function(error) {
+                console.error('Erro ao obter localização: ' + error.message);
+            });
+        } else {
+            console.error('Geolocalização não suportada pelo navegador.');
+        }
+    }
+
     // Atualizar o parágrafo inicialmente
     atualizarHorario();
 
     // Atualizar o horário a cada segundo
     setInterval(atualizarHorario, 1000);
 
+    // Obter localização ao carregar a página
+    obterLocalizacao();
+
     // Função para atualizar o horário no parágrafo
     function atualizarHorario() {
         var elementoP = document.getElementById('dataHorario');
-        elementoP.textContent = obterDataHoraFormatada();
+        if (elementoP) {
+            elementoP.textContent = obterDataHoraFormatada();
+        }
     }
 });

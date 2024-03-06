@@ -133,6 +133,13 @@ a {
         margin-right: 0;
     }
 
+    .agenda-header {
+        text-align: center;
+        background-color: #E6B800;
+        color: #fff;
+        padding: 10px;
+    }
+
     nav {
         flex-direction: column;
         align-items: flex-start;
