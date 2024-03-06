@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Minha Página</title>
 </head>
+
 <body>
     <script src="script.js"></script>
     <header>
@@ -15,13 +17,13 @@
                 <!-- Adicione seus itens de navegação aqui -->
             </ul>
         </nav>
-        
+
         <div class="buscar-bairro">
-           <div class="input-bairro">
-             <img src="/images/ponto2.png" alt="Ícone de busca">
-             <input type="text" placeholder="Digite o bairro">
-           </div>
-           <button type="button">Procurar</button>
+            <div class="input-bairro">
+                <img src="/images/ponto2.png" alt="Ícone de busca">
+                <input type="text" placeholder="Digite o bairro">
+            </div>
+            <button type="button">Procurar</button>
         </div>
     </header>
 
@@ -31,86 +33,88 @@
     </section>
 
     <div class="opcoes" id="maisProximosOpcao">
-        <div class="opcao" onclick="toggleConteudo('maisProximosConteudo', 'setaMaisProximos')">
-            MAIS PRÓXIMOS DE VOCÊ
-            <span class="seta" id="setaMaisProximos">&#9660;</span><!-- Seta para baixo -->
+        <div class="opcao opcao-aberta" onclick="toggleOpcoes('maisProximo', 'setaMaisProximo')">
+            MAIS PRÓXIMO DE VOCÊ
+            <span class="seta" id="setaMaisProximo">&#9660;</span><!-- Seta para baixo -->
         </div>
-        <div id="maisProximosConteudo" class="opcao-conteudo">
-            <!-- Conteúdo relacionado à opção "MAIS PRÓXIMOS DE VOCÊ" -->
+        <div id="maisProximo" class="opcao-conteudo">
+            <!-- Conteúdo relacionado à opção "MAIS PRÓXIMO DE VOCÊ" -->
+            <!-- Pode incluir informações sobre localização, bairro, etc. -->
             <p>Conteúdo relacionado à sua localização.</p>
+
+            <!-- Seções adicionadas -->
+            <section class="aba">
+                <img src="/images/arenateste.png">
+                <div class="aba-conteudo">
+                    <div class="info-texto">
+                        <h3>ARENA FÁTIMA</h3>
+                        <p>Zona: Leste</p>
+                        <p>Horário mais próximo disponível: 17:00</p>
+                    </div>
+                    <button class="quero-agendar-button">QUERO AGENDAR</button>
+                </div>
+            </section>
+
+            <hr class="linha-separadora">
+
+            <section class="aba">
+                <img src="/images/arenateste2.png">
+                <div class="aba-conteudo">
+                    <div class="info-texto">
+                        <h3>ARENA DIRCEU</h3>
+                        <p>Zona: Leste</p>
+                        <p>Horário mais próximo disponível: 16:00</p>
+                    </div>
+                    <button class="quero-agendar-button">QUERO AGENDAR</button>
+                </div>
+            </section>
+
+            <hr class="linha-separadora">
+
+            <section class="aba">
+                <img src="/images/quadra3teste.png">
+                <div class="aba-conteudo">
+                    <div class="info-texto">
+                        <h3>ARENA SÃO JOÃO</h3>
+                        <p>Zona: Sul</p>
+                        <p>Horário mais próximo disponível: 18:00</p>
+                    </div>
+                    <button class="quero-agendar-button">QUERO AGENDAR</button>
+                </div>
+            </section>
+            <!-- Mais abas podem ser adicionadas conforme necessário -->
         </div>
     </div>
-
-    <section class="aba">
-        <img src="/images/arenateste.png">
-        <div class="aba-conteudo">
-            <div class="info-texto">
-                <h3>ARENA FÁTIMA</h3>
-                <p>Zona: Leste</p>
-                <p>Hórario mais próximo disponível: 17:00</p>
-            </div>
-            <button class="quero-agendar-button">QUERO AGENDAR</button>
-        </div>
-    </section>
-
-    <hr class="linha-separadora">
-
-    <section class="aba">
-        <img src="/images/arenateste2.png">
-        <div class="aba-conteudo">
-            <div class="info-texto">
-                <h3>ARENA DIRCEU</h3>
-                <p>Zona: Leste</p>
-                <p>Hórario mais próximo disponível: 16:00</p>
-            </div>
-            <button class="quero-agendar-button">QUERO AGENDAR</button>
-        </div>
-    </section>
-
-    <hr class="linha-separadora">
-
-    <section class="aba">
-        <img src="/images/quadra3teste.png">
-        <div class="aba-conteudo">
-            <div class="info-texto">
-                <h3>ARENA SÃO JOÃO</h3>
-                <p>Zona: Sul</p>
-                <p>Hórario mais próximo disponível: 18:00</p>
-            </div>
-            <button class="quero-agendar-button">QUERO AGENDAR</button>
-        </div>
-    </section>
-
-    <!-- Mais abas podem ser adicionadas conforme necessário -->
 
     <!-- Barra de Informações -->
-<footer>
-    <div class="patrocinadores">
-        <h4>Patrocinadores Oficiais</h4>
-        <ul>
-            <li>Empresa A</li>
-            <li>Empresa B</li>
-            <!-- Adicione mais patrocinadores conforme necessário -->
-        </ul>
-    </div>
+    <footer>
+        <div class="patrocinadores">
+            <h4>Patrocinadores Oficiais</h4>
+            <ul>
+                <li>Empresa A</li>
+                <li>Empresa B</li>
+                <!-- Adicione mais patrocinadores conforme necessário -->
+            </ul>
+        </div>
 
-    <div class="redes-sociais">
-        <h4>Redes Sociais</h4>
-        <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Instagram</a></li>
-            <!-- Adicione mais redes sociais conforme necessário -->
-        </ul>
-    </div>
+        <div class="redes-sociais">
+            <h4>Redes Sociais</h4>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+                <!-- Adicione mais redes sociais conforme necessário -->
+            </ul>
+        </div>
 
-    <div class="contato">
-        <h4>Contato</h4>
-        <p>Email: info@example.com</p>
-        <p>Telefone: (123) 456-7890</p>
-    </div>
-</footer>
-    
+        <div class="contato">
+            <h4>Contato</h4>
+            <p>Email: info@example.com</p>
+            <p>Telefone: (123) 456-7890</p>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
+
 </html>
