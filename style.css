@@ -138,6 +138,10 @@ a {
     padding: 10px;
 }
 
+#fontvalor {
+    font-weight: bold;
+}
+
 /* Estilos para telas pequenas (dispositivos móveis) */
 @media only screen and (max-width: 600px) {
     header {
