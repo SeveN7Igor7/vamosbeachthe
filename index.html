@@ -41,6 +41,7 @@
             <p>Conteúdo relacionado à sua localização.</p>
         
             <!-- Seções adicionadas -->
+            <!-- Seção da ARENA FÁTIMA -->
             <section class="aba">
                 <img src="/images/arenateste.png">
                 <div class="aba-conteudo">
@@ -50,13 +51,17 @@
                         <p>Bairro: Fátima</p>
                         <p>Horário mais próximo disponível: 17:00</p>
                         <p id="fontvalor">Valor: R$60 / Hora </p>
-                    </div>
-                    <button class="quero-agendar-button">QUERO AGENDAR</button>
+                </div>
+                    <!-- Adicione o evento onclick para chamar a função queroAgendar com os detalhes da arena como argumento -->
+                    <button class="quero-agendar-button" onclick="queroAgendar('ARENA FÁTIMA', 'Leste', 'Fátima', '17:00', 'R$60 / Hora', '/images/arenateste.png')">QUERO AGENDAR</button>
                 </div>
             </section>
-        
+
+
+            
             <hr class="linha-separadora">
         
+            <!-- Seção da ARENA DIRCEU -->
             <section class="aba">
                 <img src="/images/arenateste2.png">
                 <div class="aba-conteudo">
@@ -67,12 +72,16 @@
                         <p>Horário mais próximo disponível: 16:00</p>
                         <p id="fontvalor">Valor: R$70 / Hora </p>
                     </div>
-                    <button class="quero-agendar-button">QUERO AGENDAR</button>
+                    <!-- Adicione o evento onclick para chamar a função queroAgendar com os detalhes da arena como argumento -->
+                    <button class="quero-agendar-button" onclick="queroAgendar('ARENA DIRCEU', 'Leste', 'Fátima', '16:00', 'R$70 / Hora', '/images/arenateste2.png')">QUERO AGENDAR</button>
                 </div>
             </section>
+
+
         
             <hr class="linha-separadora">
         
+            <!-- Seção da ARENA SÃO JOÃO -->
             <section class="aba">
                 <img src="/images/quadra3teste.png">
                 <div class="aba-conteudo">
@@ -83,11 +92,12 @@
                         <p>Horário mais próximo disponível: 18:00</p>
                         <p id="fontvalor">Valor: R$60 / Hora </p>
                     </div>
-                    <button class="quero-agendar-button">QUERO AGENDAR</button>
+                    <!-- Adicione o evento onclick para chamar a função queroAgendar com os detalhes da arena como argumento -->
+                    <button class="quero-agendar-button" onclick="queroAgendar('ARENA SÃO JOÃO', 'Sul', 'Angelim', '18:00', 'R$60 / Hora', '/images/quadra3teste.png')">QUERO AGENDAR</button>
                 </div>
             </section>
-            <!-- Mais abas podem ser adicionadas conforme necessário -->
-        </div>
+
+
 
         <!-- Adicione as novas barras aqui -->
         <div class="opcao" onclick="toggleOpcoes('centro', 'setaCentro')">
